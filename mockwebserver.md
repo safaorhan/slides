@@ -1,7 +1,7 @@
 ---
-author: "> ssh devfest.safaorhan.com -p 4242"
+author: "> ssh slides.safaorhan.com -p 4242"
 date: ""
-paging: ""
+paging: "%d / %d"
 ---
 
 ##### MockWebServer ile Gerçekçi ViewModel Testleri
@@ -12,22 +12,25 @@ paging: ""
 
 ##### Safa Orhan
 
-- Bilgisayar mühendisiyim. (Boun CmpE)
+* bilgisayar mühendisi | boun cmpe 17'
+* 2013'ten bu yana     | android geliştirici
+* 2020'den bu yana     | Konya
+* şimdi                | lead android dev @ RTIC Outdoors
+* twitter              | `@safaorhanTR`, @safaorhanEN
+* youtube              | SafaOrhanTR, Safa Orhan
+* başka                | linkedin, medium, github
 
 ---
 
-##### Safa Orhan
+##### MockWebServer ile Gerçekçi ViewModel Testleri
 
-- Bilgisayar mühendisiyim. (Boun CmpE)
-- 8+ senedir Android geliştiriyorum.
-
----
-
-##### Safa Orhan
-
-- Bilgisayar mühendisiyim. (Boun CmpE)
-- 8+ senedir Android geliştiriyorum.
-- Şu anda bir Amerikan şirketinde takım lideri olarak çalışıyorum.
+- Test
+- ViewModel
+- ViewModel Testleri
+- Gerçekçi Test
+- Gerçekçi ViewModel Testleri
+- MockWebServer `<- Birazdan`
+- MockWebServer ile Gerçekçi ViewModel Testleri `<- Buradasınız`
 
 ---
 
@@ -41,13 +44,26 @@ https://github.com/square/okhttp/tree/master/mockwebserver
 
 ##### Sorun:
 
-Testlerde gerçek sunucuya gerçek istekler atamazsınız.
+Unit testlerde gerçek sunucuya gerçek istekler atamazsınız.
+
+---
+
+##### Sorun:
+
+Unit testlerde gerçek sunucuya gerçek istekler atamazsınız.
+
+------
+
+- Sürekli internetin varlığından emin olamazsınız.
+- Sunucunun sürekli açık olacağından emin olamazsınız.
+- Bağlantı zamanları çok uzundur.
+- Sunucu her zaman aynı sonucu vermez, beklenmediktir.
 
 ---
 
 ##### Çözüm 0:
 
-Test yazmaktan vazgeçer ve hiçbir şey yokmuş gibi davranırsınız.
+Test yazmaktan vazgeçer ve hiçbir şey yokmuş gibi davranırsınız.`*`
 
 
 ------
@@ -58,6 +74,24 @@ fun test() {
 }
 ```
 ------
+
+---
+
+##### Çözüm 0:
+
+Test yazmaktan vazgeçer ve hiçbir şey yokmuş gibi davranırsınız.`*`
+
+
+------
+```kotlin
+@Test
+fun test() {
+    // TODO: Bi ara test yazılacak.
+}
+```
+------
+
+`* Bu çözüm mantıklı geldiyse, sunumun geri kalanı sizin için çok sıkıcı olabilir :/` 
 
 ---
 
@@ -107,6 +141,8 @@ fun `given update will succeed, when user clicks save, it should show success`()
 ```
 ------
 
+---
+
 ##### Çözüm 3:
 
 MockWebServer ile gerçek repository kullanırsınız.
@@ -128,3 +164,24 @@ fun `given update will succeed, when user clicks save, it should show success`()
 ```
 ------
 
+---
+
+##### Örnek Uygulama
+
+https://github.com/safaorhan/mockwebserver
+
+- Kotlin
+- MVVM
+- Dagger & Hilt
+- Coroutines
+- Retrofit
+
+---
+
+##### Soru Cevap
+
+Sorularınız var mı?
+
+Beni `YouTube` ve `Twitter`'da takip etmeyi unutmayın :)
+
+Dinlediğiniz için teşekkürler!
