@@ -168,13 +168,22 @@ fun `given update will succeed, when user clicks save, it should show success`()
 
 ##### Örnek Uygulama
 
-https://github.com/safaorhan/mockwebserver
+https://github.com/safaorhan/jokes
 
 - Kotlin
 - MVVM
+- LiveData
+- Compose
 - Dagger & Hilt
 - Coroutines
 - Retrofit
+
+------
+
+- MockWebServer
+- Hiroaki (https://github.com/JorgeCastilloPrz/hiroaki)
+- AssertJ
+- Some utils
 
 ---
 
